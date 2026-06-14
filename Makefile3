@@ -1,0 +1,16 @@
+CC = gcc
+CFLAGS = -Wall
+
+TARGET1 = server
+TARGET2 = client
+
+all: $(TARGET1) $(TARGET2)
+
+$(TARGET1): server.c
+	$(CC) $(CFLAGS) server.c -o $(TARGET1)
+
+$(TARGET2): client.c
+	$(CC) $(CFLAGS) client.c -o $(TARGET2)
+
+clean:
+	rm -f $(TARGET1) $(TARGET2)
