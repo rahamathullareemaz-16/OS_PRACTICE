@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS = -Wall -pthread
+
+TARGET = mutex
+
+all: $(TARGET)
+
+$(TARGET): mutex.c
+	$(CC) $(CFLAGS) mutex.c -o $(TARGET)
+
+clean:
+	rm -f $(TARGET)
