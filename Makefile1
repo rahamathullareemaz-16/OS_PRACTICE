@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS = -Wall -pthread
+
+TARGET = semaphore
+
+all: $(TARGET)
+
+$(TARGET): semaphore.c
+	$(CC) $(CFLAGS) semaphore.c -o $(TARGET)
+
+clean:
+	rm -f $(TARGET)
